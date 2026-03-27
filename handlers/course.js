@@ -56,11 +56,11 @@ exports.update = async (req, res) => {
 
 exports.create = async (req, res) => {
   try {
-    const course = await Course.create(req.body);
+    const newCourse = await Course.create(req.body);
     res.status(201).json({
       status: "success",
       data: {
-        course,
+        newCourse,
       },
     });
   } catch (err) {

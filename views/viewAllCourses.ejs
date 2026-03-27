@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%=  naslov %></h1>
+<% if (courses.length === 0) {
+    %> <p>No courses found</p><%
+} else {
+    %> <% courses.forEach(course => {
+        %> <div class="kurs"> 
+            <a href="/welcome/<%=course.id %>"><h2><%= course.ime %></h2></a>
+            <h3>Adresa: <%= course.adresa %></h3>
+            <h3>Oblast: <%= course.oblast %></h3>
+            <h3>Akademija: <%= course.akademija ? course.akademija.ime : 'No Academy' %></h3>
+        </div><%
+    }); %> <% } %>
+
+</body>
+</html>

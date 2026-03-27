@@ -13,6 +13,11 @@ const courseSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  akademija: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Academy", 
+    required: [true, "A course must belong to an academy"]
+  }
 });
 const Course = mongoose.model("Course", courseSchema);
 module.exports = Course;

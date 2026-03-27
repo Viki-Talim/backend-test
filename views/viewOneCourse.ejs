@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <h1>Ime:<%= course.ime %></h1>
+    <div class="one-course">
+    <h2>Adresa:<%= course.adresa %></h2>
+    <h2>Oblast:<%= course.oblast %></h2>
+ <h2>Akademija:<%= course.akademija ? course.akademija.ime : 'No Academy' %></h2>
+
+     <br>
+     <a href="/welcome">Back to all courses</a>
+    </div>
+</body>
+</html>
